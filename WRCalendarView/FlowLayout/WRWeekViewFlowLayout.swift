@@ -182,6 +182,7 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
                                   width: rowHeaderWidth, height: collectionView!.frame.height)
         attributes.zIndex = zIndexForElementKind(DecorationViewKinds.rowHeaderBackground)
 
+        /*
         //current time indicator
         (attributes, currentTimeIndicatorAttributes) =
             layoutAttributesForDecorationView(at: IndexPath(row: 0, section: 0),
@@ -208,7 +209,7 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
         attributes.frame = CGRect(x: currentTimeHorizontalGridlineMinX, y: currentTimeHorizontalGridlineMinY,
                                   width: currentTimehorizontalGridlineWidth, height: gridThickness);
         attributes.zIndex = zIndexForElementKind(DecorationViewKinds.currentTimeGridline)
-        
+        */
         // column header background
         (attributes, columnHeaderBackgroundAttributes) =
             layoutAttributesForDecorationView(at: IndexPath(row: 0, section: 0),
