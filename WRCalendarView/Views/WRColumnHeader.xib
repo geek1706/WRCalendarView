@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F67a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,8 +15,15 @@
             <rect key="frame" x="0.0" y="0.0" width="110" height="58"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wh-91-ZQF">
+                    <rect key="frame" x="0.0" y="2" width="110" height="2"/>
+                    <color key="backgroundColor" red="1" green="0.331514973922721" blue="0.43122497309907748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="C7q-jP-LYq"/>
+                    </constraints>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLq-dm-tfe">
-                    <rect key="frame" x="28" y="7" width="54" height="26.5"/>
+                    <rect key="frame" x="29" y="7" width="52.5" height="26.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -31,13 +38,17 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="8wh-91-ZQF" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="2" id="BUv-ZK-Z5c"/>
+                <constraint firstItem="8wh-91-ZQF" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="NcV-7W-StZ"/>
                 <constraint firstItem="pLq-dm-tfe" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="7" id="VOe-Mr-CKe"/>
+                <constraint firstAttribute="trailing" secondItem="8wh-91-ZQF" secondAttribute="trailing" id="hDb-DT-O7O"/>
                 <constraint firstItem="Q9z-bN-EyV" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="haP-Ii-uD1"/>
                 <constraint firstItem="pLq-dm-tfe" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="jHP-Ym-tbv"/>
                 <constraint firstAttribute="bottom" secondItem="Q9z-bN-EyV" secondAttribute="bottom" constant="6" id="mff-mn-Exd"/>
             </constraints>
             <connections>
                 <outlet property="dayLbl" destination="pLq-dm-tfe" id="ILg-f4-LCP"/>
+                <outlet property="indicatorView" destination="8wh-91-ZQF" id="i6b-Js-ibK"/>
                 <outlet property="weekdayLbl" destination="Q9z-bN-EyV" id="Xum-tF-49K"/>
             </connections>
             <point key="canvasLocation" x="-35" y="-139"/>
